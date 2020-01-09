@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "771079917432",
+    "firebase_url": "https://kantinkom-6974c.firebaseio.com",
+    "project_id": "kantinkom-6974c",
+    "storage_bucket": "kantinkom-6974c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771079917432:android:70ca6c975bda6d5e1b828d",
+        "android_client_info": {
+          "package_name": "com.timkontrakan.kantinkom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771079917432-im4iublc103i8aptum4p6n5f8m2rigqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.timkontrakan.kantinkom",
+            "certificate_hash": "34088cbeeee90756e8b77edfcb85d94e7a1902cd"
+          }
+        },
+        {
+          "client_id": "771079917432-ael6tkdjrajl9kursv7532k4ikchus6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD7sEo6xpbNkC5BFYeaauYk9E-HLBgG2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771079917432-ael6tkdjrajl9kursv7532k4ikchus6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

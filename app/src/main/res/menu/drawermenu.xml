@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/makanan"
+            android:title="MAKANAN"
+            android:icon="@drawable/ic_local_dining_24px">
+        </item>
+
+
+        <item
+            android:id="@+id/minuman"
+            android:title="MINUMAN"
+            android:icon="@drawable/ic_local_cafe_24px">
+        </item>
+
+        <item android:id="@+id/hemat"
+            android:title="HEMAT"
+            android:icon="@drawable/ic_fastfood_24px">
+        </item>
+
+
+        <item android:id="@+id/tentang"
+            android:title="TENTANG"
+            android:icon="@drawable/ic_info_24px">
+        </item>
+
+
+        <item android:id="@+id/pengaturan"
+            android:title="PENGATURAN"
+            android:icon="@drawable/ic_settings_applications_24px" >
+
+        </item>
+
+        <item android:id="@+id/keluar"
+            android:title="KELUAR"
+            android:icon="@drawable/ic_transit_enterexit_24px" >
+
+        </item>
+
+        <item
+            android:id="@+id/footer_spacer_1"
+            android:checkable="false"
+            android:enabled="false"
+            android:orderInCategory="200"
+            android:title="" />
+        <item
+            android:id="@+id/footer_spacer_2"
+            android:checkable="false"
+            android:enabled="false"
+            android:orderInCategory="200"
+            android:title="" />
+    </group>
+
+</menu>
