@@ -21,23 +21,28 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Random;
 
 public class HematCheckoutAct extends AppCompatActivity {
-    Button btn_bayar, btn_plus, btn_minus;
-    TextView nama_item, penjual, harga, my_balance, harga_food, jumlah_food;
-    ImageView notice_uang, btn_back;
-    Integer valuejumlahfood = 1;
-    Integer mybalance = 0;
-    Integer valuetotalharga = 0;
-    Integer valuehargafood = 0;
-    Integer sisa_balance = 0;
+    private Button btn_bayar;
+    private Button btn_minus;
+    private TextView nama_item;
+    private TextView penjual;
+    private TextView my_balance;
+    private TextView harga_food;
+    private TextView jumlah_food;
+    private ImageView notice_uang;
+    private Integer valuejumlahfood = 1;
+    private Integer mybalance = 0;
+    private Integer valuetotalharga = 0;
+    private Integer valuehargafood = 0;
+    private Integer sisa_balance = 0;
 
-    String USER_KEY = "usernamekey";
-    String username_key = "";
-    String username_key_new = "";
+    private String username_key_new = "";
 
 
     //Generate Nomor agar dapat id
-    Integer nomor_transaksi = new Random().nextInt();
-    DatabaseReference reference, reference2, reference3, reference4,ref_username;
+    private final Integer nomor_transaksi = new Random().nextInt();
+    private DatabaseReference reference3;
+    private DatabaseReference reference4;
+    private DatabaseReference ref_username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +56,12 @@ public class HematCheckoutAct extends AppCompatActivity {
         final String jenis_hemat_baru = bundle.getString("jenis_hemat");
 
         btn_bayar = findViewById(R.id.btn_bayar);
-        btn_plus = findViewById(R.id.btn_plus);
+        Button btn_plus = findViewById(R.id.btn_plus);
         btn_minus = findViewById(R.id.btn_minus);
-        btn_back = findViewById(R.id.btn_back);
+        ImageView btn_back = findViewById(R.id.btn_back);
         nama_item = findViewById(R.id.nama_item);
         penjual = findViewById(R.id.penjual);
-        harga = findViewById(R.id.harga);
+        TextView harga = findViewById(R.id.harga);
         my_balance = findViewById(R.id.my_balance);
         harga_food = findViewById(R.id.harga_food);
         notice_uang = findViewById(R.id.notice_uang);
@@ -71,12 +76,12 @@ public class HematCheckoutAct extends AppCompatActivity {
         notice_uang.setVisibility(View.GONE);
 
         //Mengambil data user dari firebase 2
-        reference2 = FirebaseDatabase.getInstance().getReference().child("Users").child(username_key_new);
+        DatabaseReference reference2 = FirebaseDatabase.getInstance().getReference().child("Users").child(username_key_new);
         reference2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 mybalance = Integer.valueOf(dataSnapshot.child("user_balance").getValue().toString());
-                my_balance.setText("RP "+mybalance+"");
+                my_balance.setText("RP " + mybalance + "");
             }
 
             @Override
@@ -86,7 +91,7 @@ public class HematCheckoutAct extends AppCompatActivity {
         });
 
         //Ambil data dari reference 1
-        reference = FirebaseDatabase.getInstance().getReference().child("Hemat").child(jenis_hemat_baru);
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Hemat").child(jenis_hemat_baru);
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -94,7 +99,7 @@ public class HematCheckoutAct extends AppCompatActivity {
                 penjual.setText(dataSnapshot.child("penjual").getValue().toString());
                 valuehargafood = Integer.valueOf(dataSnapshot.child("harga").getValue().toString());
                 valuetotalharga = valuehargafood * valuejumlahfood;
-                harga_food.setText("RP "+valuetotalharga+"");
+                harga_food.setText("RP " + valuetotalharga + "");
 
             }
 
@@ -108,15 +113,15 @@ public class HematCheckoutAct extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                valuejumlahfood+=1;
+                valuejumlahfood += 1;
                 jumlah_food.setText(valuejumlahfood.toString());
-                if (valuejumlahfood > 1){
+                if (valuejumlahfood > 1) {
                     btn_minus.animate().alpha(1).setDuration(300).start();
                     btn_minus.setEnabled(true);
                 }
                 valuetotalharga = valuehargafood * valuejumlahfood;
-                harga_food.setText("RP "+ valuetotalharga+"");
-                if (valuetotalharga > mybalance){
+                harga_food.setText("RP " + valuetotalharga + "");
+                if (valuetotalharga > mybalance) {
                     btn_bayar.animate().translationY(250)
                             .alpha(0).setDuration(350).start();
                     btn_bayar.setEnabled(false);
@@ -131,16 +136,16 @@ public class HematCheckoutAct extends AppCompatActivity {
         btn_minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                valuejumlahfood-=1;
+                valuejumlahfood -= 1;
                 jumlah_food.setText(valuejumlahfood.toString());
 
-                if (valuejumlahfood < 2){
+                if (valuejumlahfood < 2) {
                     btn_minus.animate().alpha(0).setDuration(300).start();
                     btn_minus.setEnabled(false);
                 }
                 valuetotalharga = valuehargafood * valuejumlahfood;
-                harga_food.setText("RP "+ valuetotalharga+"");
-                if (valuetotalharga < mybalance){
+                harga_food.setText("RP " + valuetotalharga + "");
+                if (valuetotalharga < mybalance) {
                     btn_bayar.animate().translationY(0)
                             .alpha(1).setDuration(350).start();
                     btn_bayar.setEnabled(true);
@@ -214,8 +219,11 @@ public class HematCheckoutAct extends AppCompatActivity {
             }
         });
     }
-    public void getUsernameLocal(){
+
+    private void getUsernameLocal() {
+        String USER_KEY = "usernamekey";
         SharedPreferences sharedPreferences = getSharedPreferences(USER_KEY, MODE_PRIVATE);
+        String username_key = "";
         username_key_new = sharedPreferences.getString(username_key, "");
     }
 }

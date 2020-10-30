@@ -20,29 +20,31 @@ import com.squareup.picasso.Picasso;
 public class DrinkDetailAct extends AppCompatActivity {
 
 
-    TextView nama_drink, short_desc, harga, penjual;
-    ImageView bg_drink, minuman, btn_back;
-    Button btn_checkout;
-    DatabaseReference reference;
+    private TextView nama_drink;
+    private TextView short_desc;
+    private TextView harga;
+    private TextView penjual;
+    private ImageView bg_drink;
+    private ImageView minuman;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drink_detail);
 
-        btn_back = findViewById(R.id.btn_back);
+        ImageView btn_back = findViewById(R.id.btn_back);
         nama_drink = findViewById(R.id.nama_drink);
         short_desc = findViewById(R.id.short_desc);
         harga = findViewById(R.id.harga);
         penjual = findViewById(R.id.penjual);
         bg_drink = findViewById(R.id.bg_drink);
         minuman = findViewById(R.id.minuman);
-        btn_checkout = findViewById(R.id.btn_checkout);
+        Button btn_checkout = findViewById(R.id.btn_checkout);
 
         //Mengambil data dari Intent
         Bundle bundle = getIntent().getExtras();
         final String jenis_minuman_baru = bundle.getString("jenis_minuman");
-        reference = FirebaseDatabase.getInstance().getReference().child("Drink").child(jenis_minuman_baru);
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Drink").child(jenis_minuman_baru);
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -58,7 +60,7 @@ public class DrinkDetailAct extends AppCompatActivity {
                     Picasso.with(DrinkDetailAct.this)
                             .load(dataSnapshot.child("bg_drink").getValue().toString())
                             .centerCrop().fit().into(bg_drink);
-                }catch (NullPointerException ignored){
+                } catch (NullPointerException ignored) {
 
                 }
             }
@@ -78,7 +80,6 @@ public class DrinkDetailAct extends AppCompatActivity {
                 finish();
             }
         });
-
 
 
         btn_back.setOnClickListener(new View.OnClickListener() {

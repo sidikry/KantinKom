@@ -9,14 +9,12 @@ import android.widget.Button;
 
 public class SuccesRegisterAct extends AppCompatActivity {
 
-    Button btn_dashboard;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_succes_register);
 
-        btn_dashboard = findViewById(R.id.btn_dashboard);
+        Button btn_dashboard = findViewById(R.id.btn_dashboard);
         btn_dashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

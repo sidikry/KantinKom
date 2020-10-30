@@ -10,8 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TentangKamiAct">
-        </activity>
+        <activity android:name=".TentangKamiAct" />
         <activity android:name=".HematCheckoutAct" />
         <activity android:name=".DrinkCheckoutAct" />
         <activity android:name=".MyCartAct" />
@@ -25,13 +24,14 @@
         <activity android:name=".SuccesRegisterAct" />
         <activity android:name=".SuccesBuyFoodAct" />
         <activity android:name=".MyFoodDetailAct" />
-        <activity android:name=".MyProfileAct">
-        </activity>
+        <activity android:name=".MyProfileAct" />
         <activity android:name=".FoodDetailAct" />
         <activity android:name=".HomeAct" />
-        <activity android:name=".RegisterTwoAct"></activity>
-        <activity android:name=".RegisterOneAct"></activity>
-        <activity android:name=".LoginAct" />
+        <activity android:name=".RegisterTwoAct" />
+        <activity android:name=".RegisterOneAct" />
+        <activity android:name=".LoginAct">
+
+        </activity>
         <activity android:name=".GetStartedAct" />
         <activity android:name=".SplashAct">
             <intent-filter>

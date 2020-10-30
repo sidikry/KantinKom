@@ -1,8 +1,10 @@
 package com.timkontrakan.kantinkom;
 
-public class MyCart {
+class MyCart {
 
-    String nama_item, harga, penjual;
+    private String nama_item;
+    private String harga;
+    private String penjual;
 
     public MyCart() {
     }

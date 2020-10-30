@@ -18,10 +18,12 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 public class HematDetailAct extends AppCompatActivity {
-    TextView nama_hemat, short_desc, harga, penjual;
-    ImageView bg_hemat, hemat, btn_back;
-    Button btn_checkout;
-    DatabaseReference reference;
+    private TextView nama_hemat;
+    private TextView short_desc;
+    private TextView harga;
+    private TextView penjual;
+    private ImageView bg_hemat;
+    private ImageView hemat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,16 +33,16 @@ public class HematDetailAct extends AppCompatActivity {
         nama_hemat = findViewById(R.id.nama_hemat);
         short_desc = findViewById(R.id.short_desc);
         harga = findViewById(R.id.harga);
-        penjual= findViewById(R.id.penjual);
+        penjual = findViewById(R.id.penjual);
         bg_hemat = findViewById(R.id.bg_hemat);
-        btn_back = findViewById(R.id.btn_back);
+        ImageView btn_back = findViewById(R.id.btn_back);
         hemat = findViewById(R.id.hemat);
-        btn_checkout = findViewById(R.id.btn_checkout);
+        Button btn_checkout = findViewById(R.id.btn_checkout);
 
         //Mengambil data dari Intent
         Bundle bundle = getIntent().getExtras();
         final String jenis_hemat_baru = bundle.getString("jenis_hemat");
-        reference = FirebaseDatabase.getInstance().getReference().child("Hemat").child(jenis_hemat_baru);
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Hemat").child(jenis_hemat_baru);
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -56,7 +58,7 @@ public class HematDetailAct extends AppCompatActivity {
                     Picasso.with(HematDetailAct.this)
                             .load(dataSnapshot.child("bg_hemat").getValue().toString())
                             .centerCrop().fit().into(bg_hemat);
-                }catch (NullPointerException ignored){
+                } catch (NullPointerException ignored) {
 
                 }
             }

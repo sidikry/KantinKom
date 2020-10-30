@@ -11,16 +11,13 @@ import android.widget.LinearLayout;
 
 public class TentangKamiAct extends AppCompatActivity {
 
-    ImageView btn_back;
-    LinearLayout ig_apenk;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tentang_kami);
 
-        btn_back = findViewById(R.id.btn_back);
-        ig_apenk = findViewById(R.id.ig_apenk);
+        ImageView btn_back = findViewById(R.id.btn_back);
+        LinearLayout ig_apenk = findViewById(R.id.ig_apenk);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,15 +28,18 @@ public class TentangKamiAct extends AppCompatActivity {
             }
         });
     }
-    public void instagram1(View view){
+
+    public void instagram1() {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/apejakno"));
         startActivity(intent);
     }
-    public void instagram2(View view){
+
+    public void instagram2() {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/puasa_ngoding"));
         startActivity(intent);
     }
-    public void instagram3(View view){
+
+    public void instagram3() {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/ssidik.28"));
         startActivity(intent);
     }

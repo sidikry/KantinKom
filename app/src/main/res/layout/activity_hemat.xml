@@ -29,7 +29,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
@@ -105,7 +104,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9">
 
         <ImageView
-            android:id="@+id/minumansatu"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/hemat_satu" />
@@ -123,7 +121,7 @@
             android:id="@+id/btn_telur"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:src="@drawable/ic_keyboard_arrow_right_24px"/>
+            android:src="@drawable/ic_keyboard_arrow_right_24px" />
 
     </FrameLayout>
 
@@ -217,7 +215,6 @@ ngopi, wualah nikmat."
         app:layout_constraintStart_toEndOf="@+id/frameLayout2" />
 
     <TextView
-        android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -255,7 +252,6 @@ Dengan sedikit pahit."
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
 
         <ImageView
-            android:id="@+id/plus"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/hemat_tiga" />
@@ -291,7 +287,6 @@ Dengan sedikit pahit."
         app:layout_constraintStart_toEndOf="@+id/frameLayout3" />
 
     <TextView
-        android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -365,7 +360,6 @@ tuh makan yang westernan."
         app:layout_constraintStart_toEndOf="@+id/frameLayout4" />
 
     <TextView
-        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -438,7 +432,6 @@ ngan telur pilihan."
         app:layout_constraintStart_toEndOf="@+id/frameLayout5" />
 
     <TextView
-        android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"

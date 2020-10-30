@@ -3,6 +3,7 @@ package com.timkontrakan.kantinkom;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -27,19 +28,25 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.util.Objects;
+
 public class EditProfileAct extends AppCompatActivity {
-    Button btn_back, btn_add_photo, btn_save;
-    EditText nama_lengkap, username, email_address, password;
-    ImageView photo_edit_profile;
+    private Button btn_save;
+    private EditText nama_lengkap;
+    private EditText username;
+    private EditText email_address;
+    private EditText password;
+    private ImageView photo_edit_profile;
 
-    Uri photo_location;
-    Integer photo_max = 1;
+    private Uri photo_location;
 
-    DatabaseReference reference;
-    StorageReference storageReference;
-    String USER_KEY = "usernamekey";
-    String username_key = "";
-    String username_key_new = "";
+    private DatabaseReference reference;
+    private StorageReference storageReference;
+    private String username_key_new = "";
+
+    public EditProfileAct(Uri photo_location) {
+        this.photo_location = photo_location;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,12 +55,12 @@ public class EditProfileAct extends AppCompatActivity {
 
         getUsernameLocal();
 
-        btn_back = findViewById(R.id.btn_back);
+        Button btn_back = findViewById(R.id.btn_back);
         nama_lengkap = findViewById(R.id.nama_lengkap);
         username = findViewById(R.id.username);
         email_address = findViewById(R.id.email_address);
         password = findViewById(R.id.password);
-        btn_add_photo = findViewById(R.id.btn_add_photo);
+        Button btn_add_photo = findViewById(R.id.btn_add_photo);
         btn_save = findViewById(R.id.btn_save);
         photo_edit_profile = findViewById(R.id.photo_edit_profile);
 
@@ -62,16 +69,16 @@ public class EditProfileAct extends AppCompatActivity {
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                nama_lengkap.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
-                username.setText(dataSnapshot.child("username").getValue().toString());
-                email_address.setText(dataSnapshot.child("email_address").getValue().toString());
-                password.setText(dataSnapshot.child("password").getValue().toString());
-                try{
-                    Picasso.with(EditProfileAct.this).load(dataSnapshot.child("url_photo_profile")
-                            .getValue().toString())
+                nama_lengkap.setText(Objects.requireNonNull(dataSnapshot.child("nama_lengkap").getValue()).toString());
+                username.setText(Objects.requireNonNull(dataSnapshot.child("username").getValue()).toString());
+                email_address.setText(Objects.requireNonNull(dataSnapshot.child("email_address").getValue()).toString());
+                password.setText(Objects.requireNonNull(dataSnapshot.child("password").getValue()).toString());
+                try {
+                    Picasso.with(EditProfileAct.this).load(Objects.requireNonNull(dataSnapshot.child("url_photo_profile")
+                            .getValue()).toString())
                             .centerCrop()
                             .fit().into(photo_edit_profile);
-                }catch (NullPointerException ignored){
+                } catch (NullPointerException ignored) {
 
                 }
             }
@@ -83,6 +90,7 @@ public class EditProfileAct extends AppCompatActivity {
         });
 
         btn_save.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 //Ubah State menjadi Loading
@@ -102,7 +110,7 @@ public class EditProfileAct extends AppCompatActivity {
 
                     }
                 });
-                if (photo_location !=null){
+                if (photo_location != null) {
                     final StorageReference storageReference1 = storageReference
                             .child(System.currentTimeMillis()
                                     + "." + getFileExtension(photo_location));
@@ -110,7 +118,7 @@ public class EditProfileAct extends AppCompatActivity {
                     storageReference1.putFile(photo_location).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            String uri_photo = taskSnapshot.getUploadSessionUri().toString();
+                            String uri_photo = Objects.requireNonNull(taskSnapshot.getUploadSessionUri()).toString();
                             reference.getRef().child("url_photo_profile").setValue(uri_photo);
                         }
                     }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
@@ -146,21 +154,24 @@ public class EditProfileAct extends AppCompatActivity {
         });
     }
 
-    String getFileExtension(Uri uri){
+    private String getFileExtension(Uri uri) {
         ContentResolver contentResolver = getContentResolver();
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
-        return  mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
+        return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
     }
 
-    public void findPhoto(){
+    private void findPhoto() {
         Intent pic = new Intent();
         pic.setType("image/*");
         pic.setAction(Intent.ACTION_GET_CONTENT);
+        int photo_max = 1;
         startActivityForResult(pic, photo_max);
     }
 
-    public void getUsernameLocal(){
+    private void getUsernameLocal() {
+        String USER_KEY = "usernamekey";
         SharedPreferences sharedPreferences = getSharedPreferences(USER_KEY, MODE_PRIVATE);
+        String username_key = "";
         username_key_new = sharedPreferences.getString(username_key, "");
     }
 }

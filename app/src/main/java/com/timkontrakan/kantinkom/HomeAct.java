@@ -21,13 +21,7 @@ import com.squareup.picasso.Picasso;
 
 public class HomeAct extends AppCompatActivity {
 
-    ImageView btn_soto, btn_nasgor, btn_bakso, btn_tahu, btn_mie, btn_back;
-
-    DatabaseReference reference;
-
-    String USER_KEY = "usernamekey";
-    String username_key = "";
-    String username_key_new = "";
+    private String username_key_new = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +30,14 @@ public class HomeAct extends AppCompatActivity {
 
         getUsernameLocal();
 
-        btn_nasgor = findViewById(R.id.btn_nasgor);
-        btn_bakso = findViewById(R.id.btn_bakso);
-        btn_tahu = findViewById(R.id.btn_tahu);
-        btn_mie = findViewById(R.id.btn_mie);
-        btn_soto = findViewById(R.id.btn_soto);
-        btn_back = findViewById(R.id.btn_back);
+        ImageView btn_nasgor = findViewById(R.id.btn_nasgor);
+        ImageView btn_bakso = findViewById(R.id.btn_bakso);
+        ImageView btn_tahu = findViewById(R.id.btn_tahu);
+        ImageView btn_mie = findViewById(R.id.btn_mie);
+        ImageView btn_soto = findViewById(R.id.btn_soto);
+        ImageView btn_back = findViewById(R.id.btn_back);
 
-        reference = FirebaseDatabase.getInstance().getReference().child("Users").child(username_key_new);
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Users").child(username_key_new);
         btn_soto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,8 +98,10 @@ public class HomeAct extends AppCompatActivity {
         });
     }
 
-    public void getUsernameLocal() {
+    private void getUsernameLocal() {
+        String USER_KEY = "usernamekey";
         SharedPreferences sharedPreferences = getSharedPreferences(USER_KEY, MODE_PRIVATE);
+        String username_key = "";
         username_key_new = sharedPreferences.getString(username_key, "");
     }
 }

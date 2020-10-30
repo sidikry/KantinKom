@@ -1,11 +1,25 @@
 <resources>
     <string name="app_name">KantinKom</string>
-    <string name="caption">Bingung mau pesen makanan tapi mager ? buka aja aplikasi KantinKom
-        Tinggal pilih menunya dan lakukan pembayarannya.
-    </string>
-    <string name="open">Open</string>
-    <string name="close">Close</string>
+    <string name="logo">logo</string>
+    <string name="back">back</string>
+    <string name="menu">Silahkan pilih menu yang tersedia</string>
+    <string name="choose_drink">Pilih Minuman</string>
+    <string name="one_drink">one_drink</string>
+    <string name="lemon">lemon</string>
+    <string name="es_lemon">ES LEMON</string>
+    <string name="nikmati_kesegeran_dan_n_kecutnya_lemon_khas">Nikmati kesegeran dan\n kecutnya lemon khas.</string>
+    <string name="ini_minuman">iniminuman</string>
+    <string name="ini_stroberi">ini_stroberi</string>
+    <string name="jus_stroberi">JUS STROBERI</string>
+    <string name="stroberi_des">Dengan stroberi segar pil-\n ihan terbaik dari gunung.</string>
+    <string name="ini_kopi">ini Kopi</string>
+    <string name="kopi_ireng">KOPI IRENG</string>
+    <string name="kopi_des">Numerouno kopi khas den-\n gan citarasa Indonesiano.</string>
+    <string name="sirup_marjan">SIRUP MARJAN</string>
+    <string name="sirup_des">Sirup ciptaan bulan puasa,\n yang iklannya menggoda.</string>
+    <string name="ini_jeruk">ini Jeruk</string>
+    <string name="es_jeruk">ES JERUK</string>
+    <string name="jeruk_des">Es jeruk 500an ga pake ke-\n ntang, segerrr ra karuan.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

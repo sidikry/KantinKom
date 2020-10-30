@@ -12,24 +12,19 @@ import com.google.firebase.database.DatabaseReference;
 
 public class HematAct extends AppCompatActivity {
 
-    ImageView btn_telur, btn_roti, btn_kolak, btn_rolur, btn_sate, btn_back;
     DatabaseReference reference;
-
-    String USER_KEY = "usernamekey";
-    String username_key = "";
-    String username_key_new = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hemat);
         getUsernameLocal();
-        btn_telur = findViewById(R.id.btn_telur);
-        btn_rolur = findViewById(R.id.btn_rolur);
-        btn_roti = findViewById(R.id.btn_roti);
-        btn_sate = findViewById(R.id.btn_sate);
-        btn_kolak = findViewById(R.id.btn_kolak);
-        btn_back = findViewById(R.id.btn_back);
+        ImageView btn_telur = findViewById(R.id.btn_telur);
+        ImageView btn_rolur = findViewById(R.id.btn_rolur);
+        ImageView btn_roti = findViewById(R.id.btn_roti);
+        ImageView btn_sate = findViewById(R.id.btn_sate);
+        ImageView btn_kolak = findViewById(R.id.btn_kolak);
+        ImageView btn_back = findViewById(R.id.btn_back);
 
         btn_telur.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,8 +80,11 @@ public class HematAct extends AppCompatActivity {
             }
         });
     }
-    public void getUsernameLocal() {
+
+    private void getUsernameLocal() {
+        String USER_KEY = "usernamekey";
         SharedPreferences sharedPreferences = getSharedPreferences(USER_KEY, MODE_PRIVATE);
-        username_key_new = sharedPreferences.getString(username_key, "");
+        String username_key = "";
+        String username_key_new = sharedPreferences.getString(username_key, "");
     }
 }

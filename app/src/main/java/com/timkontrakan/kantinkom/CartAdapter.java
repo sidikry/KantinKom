@@ -1,7 +1,6 @@
 package com.timkontrakan.kantinkom;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +13,10 @@ import java.util.ArrayList;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> {
 
-    Context context;
-    ArrayList<MyCart> myCart;
-    public CartAdapter(Context c, ArrayList<MyCart> p){
+    private final Context context;
+    private final ArrayList<MyCart> myCart;
+
+    public CartAdapter(Context c, ArrayList<MyCart> p) {
         context = c;
         myCart = p;
     }
@@ -25,9 +25,9 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-       return new MyViewHolder(LayoutInflater
-       .from(context)
-       .inflate(R.layout.item_cart, viewGroup, false));
+        return new MyViewHolder(LayoutInflater
+                .from(context)
+                .inflate(R.layout.item_cart, viewGroup, false));
     }
 
     @Override
@@ -36,7 +36,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
         myViewHolder.nama_item.setText(myCart.get(i).getNama_item());
         myViewHolder.harga.setText(myCart.get(i).getHarga());
         myViewHolder.penjual.setText(myCart.get(i).getPenjual());
-        final String getNamaWisata = myCart.get(i).getNama_item();
 
     }
 
@@ -45,10 +44,12 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
         return myCart.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView nama_item, penjual, harga;
+    static class MyViewHolder extends RecyclerView.ViewHolder {
+        final TextView nama_item;
+        final TextView penjual;
+        final TextView harga;
 
-        public MyViewHolder(@NonNull View itemView) {
+        MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             nama_item = itemView.findViewById(R.id.nama_item);

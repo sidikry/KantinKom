@@ -1,8 +1,9 @@
 package com.timkontrakan.kantinkom;
 
-public class MyFood {
-    String nama_food, is_by;
-    String jumlah_food;
+class MyFood {
+    private String nama_food;
+    private String is_by;
+    private String jumlah_food;
 
     public MyFood() {
     }

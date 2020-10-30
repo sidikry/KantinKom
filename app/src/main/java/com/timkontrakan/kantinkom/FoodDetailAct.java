@@ -22,14 +22,14 @@ import java.util.Random;
 
 public class FoodDetailAct extends AppCompatActivity {
 
-    TextView nama_food, short_desc, harga, penjual;
-    ImageView bg_food, makanan, btn_back;
-    Button btn_checkout;
-    DatabaseReference reference, reference2, ref_username;
-
-    String USER_KEY = "usernamekey";
-    String username_key = "";
-    String username_key_new = "";
+    private TextView nama_food;
+    private TextView short_desc;
+    private TextView harga;
+    private TextView penjual;
+    private ImageView bg_food;
+    private ImageView makanan;
+    DatabaseReference reference2;
+    DatabaseReference ref_username;
 
     //Generate Nomor agar dapat id
     Integer nomor_transaksi = new Random().nextInt();
@@ -48,15 +48,15 @@ public class FoodDetailAct extends AppCompatActivity {
         short_desc = findViewById(R.id.short_desc);
         harga = findViewById(R.id.harga);
         penjual = findViewById(R.id.penjual);
-        btn_checkout = findViewById(R.id.btn_checkout);
-        btn_back = findViewById(R.id.btn_back);
+        Button btn_checkout = findViewById(R.id.btn_checkout);
+        ImageView btn_back = findViewById(R.id.btn_back);
 
         //Mengambil data dari Intent
         Bundle bundle = getIntent().getExtras();
         final String jenis_makanan_baru = bundle.getString("jenis_makanan");
 
-       //Ambil Data dari Firebase
-        reference = FirebaseDatabase.getInstance().getReference().child("Food").child(jenis_makanan_baru);
+        //Ambil Data dari Firebase
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Food").child(jenis_makanan_baru);
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -65,16 +65,16 @@ public class FoodDetailAct extends AppCompatActivity {
                 penjual.setText(dataSnapshot.child("penjual").getValue().toString());
                 short_desc.setText(dataSnapshot.child("short_desc").getValue().toString());
 
-                    try {
-                        Picasso.with(FoodDetailAct.this)
-                                .load(dataSnapshot.child("url_thumbnail").getValue().toString())
-                                .centerCrop().fit().into(makanan);
-                        Picasso.with(FoodDetailAct.this)
-                                .load(dataSnapshot.child("bg_food").getValue().toString())
-                                .centerCrop().fit().into(bg_food);
-                    }catch (NullPointerException ignored){
+                try {
+                    Picasso.with(FoodDetailAct.this)
+                            .load(dataSnapshot.child("url_thumbnail").getValue().toString())
+                            .centerCrop().fit().into(makanan);
+                    Picasso.with(FoodDetailAct.this)
+                            .load(dataSnapshot.child("bg_food").getValue().toString())
+                            .centerCrop().fit().into(bg_food);
+                } catch (NullPointerException ignored) {
 
-                    }
+                }
 
             }
 
@@ -104,8 +104,11 @@ public class FoodDetailAct extends AppCompatActivity {
             }
         });
     }
-    public void getUsernameLocal(){
+
+    private void getUsernameLocal() {
+        String USER_KEY = "usernamekey";
         SharedPreferences sharedPreferences = getSharedPreferences(USER_KEY, MODE_PRIVATE);
-        username_key_new = sharedPreferences.getString(username_key, "");
+        String username_key = "";
+        String username_key_new = sharedPreferences.getString(username_key, "");
     }
 }

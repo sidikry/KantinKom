@@ -18,21 +18,22 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class RegisterOneAct extends AppCompatActivity {
-        Button btn_next;
-        ImageView btn_back;
+    private Button btn_next;
 
-        DatabaseReference reference;
-        EditText xusername, xemail_address, x_password;
+    private DatabaseReference reference;
+    private EditText xusername;
+    private EditText xemail_address;
+    private EditText x_password;
 
-        String USER_KEY ="usernamekey";
-        String username_key ="";
+    private final String USER_KEY = "usernamekey";
+    private final String username_key = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_one);
         btn_next = findViewById(R.id.btn_next);
-        btn_back = findViewById(R.id.btn_back);
+        ImageView btn_back = findViewById(R.id.btn_back);
         xusername = findViewById(R.id.xusername);
         xemail_address = findViewById(R.id.xemail_address);
         x_password = findViewById(R.id.x_password);

@@ -29,7 +29,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
@@ -63,7 +62,6 @@
         app:layout_constraintTop_toBottomOf="@+id/logo_amikom">
 
     </LinearLayout>
-
 
 
     <TextView
@@ -106,7 +104,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <com.github.florent37.shapeofview.shapes.CircleView
-        android:id="@+id/photo_user"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="17dp"
@@ -301,8 +298,8 @@
             tools:layout_editor_absoluteY="443dp" />
 
 
-
     </LinearLayout>
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="292dp"
@@ -324,10 +321,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout15" />
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

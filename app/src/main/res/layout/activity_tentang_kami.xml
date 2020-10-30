@@ -29,7 +29,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
@@ -103,7 +102,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <com.github.florent37.shapeofview.shapes.CircleView
-        android:id="@+id/photo_user"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginTop="20dp"
@@ -204,7 +202,6 @@
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <com.github.florent37.shapeofview.shapes.CircleView
-        android:id="@+id/circleView"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="38dp"
@@ -302,7 +299,6 @@
         app:layout_constraintTop_toBottomOf="@+id/view4" />
 
     <com.github.florent37.shapeofview.shapes.CircleView
-        android:id="@+id/circleView2"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="43dp"
@@ -347,7 +343,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
     <TextView
-        android:id="@+id/textView38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -376,7 +371,6 @@
     </LinearLayout>
 
     <FrameLayout
-        android:id="@+id/frameLayout7"
         android:layout_width="22dp"
         android:layout_height="22dp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout17"
@@ -392,7 +386,6 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/textView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -430,9 +423,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout" />
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

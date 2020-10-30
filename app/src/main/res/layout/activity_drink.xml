@@ -24,16 +24,17 @@
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/back"
         android:src="@drawable/ic_keyboard_backspace_24px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
+        android:contentDescription="@string/logo"
         android:src="@drawable/ic_notifications_24px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,6 +44,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/logo"
         android:src="@drawable/logo_amikom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +58,7 @@
         android:layout_marginTop="60dp"
         android:fontFamily="@font/montserratmedium"
         android:gravity="center"
-        android:text="Pilih Minuman"
+        android:text="@string/choose_drink"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="20sp"
@@ -70,7 +72,7 @@
         android:layout_marginStart="24dp"
         android:fontFamily="@font/sourcesansproregular"
         android:gravity="center"
-        android:text="Silahkan pilih menu yang tersedia"
+        android:text="@string/menu"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="16sp"
@@ -105,10 +107,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9">
 
         <ImageView
-            android:id="@+id/minumansatu"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/minuman_satu" />
+            android:src="@drawable/minuman_satu"
+            android:contentDescription="@string/one_drink" />
 
     </FrameLayout>
 
@@ -123,7 +125,8 @@
             android:id="@+id/btn_lemon"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:src="@drawable/ic_keyboard_arrow_right_24px"/>
+            android:src="@drawable/ic_keyboard_arrow_right_24px"
+            android:contentDescription="@string/lemon" />
 
     </FrameLayout>
 
@@ -131,10 +134,10 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/montserratbold"
-        android:text="ES LEMON"
+        android:text="@string/es_lemon"
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
@@ -144,11 +147,10 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Nikmati kesegeran dan\n
-kecutnya lemon khas."
+        android:text="@string/nikmati_kesegeran_dan_n_kecutnya_lemon_khas"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/frameLayout"
@@ -165,8 +167,8 @@ kecutnya lemon khas."
         android:alpha="0.48"
         android:background="@drawable/bg_overlay_orange"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
     </LinearLayout>
@@ -184,7 +186,8 @@ kecutnya lemon khas."
             android:id="@+id/minuman"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/minuman_dua" />
+            android:src="@drawable/minuman_dua"
+            android:contentDescription="@string/ini_minuman" />
 
     </FrameLayout>
 
@@ -199,7 +202,8 @@ kecutnya lemon khas."
             android:id="@+id/btn_stoberi"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:src="@drawable/ic_keyboard_arrow_right_24px" />
+            android:src="@drawable/ic_keyboard_arrow_right_24px"
+            android:contentDescription="@string/ini_stroberi" />
 
     </FrameLayout>
 
@@ -207,23 +211,21 @@ kecutnya lemon khas."
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/montserratbold"
-        android:text="JUS STROBERI"
+        android:text="@string/jus_stroberi"
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout7"
         app:layout_constraintStart_toEndOf="@+id/frameLayout2" />
 
     <TextView
-        android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Dengan stroberi segar pil-\n
-ihan terbaik dari gunung."
+        android:text="@string/stroberi_des"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/frameLayout2"
@@ -239,8 +241,8 @@ ihan terbaik dari gunung."
         android:alpha="0.48"
         android:background="@drawable/bg_overlay_orange"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout7"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
     </LinearLayout>
@@ -255,10 +257,10 @@ ihan terbaik dari gunung."
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
 
         <ImageView
-            android:id="@+id/plus"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/minuman_tiga" />
+            android:src="@drawable/minuman_tiga"
+            android:contentDescription="@string/ini_minuman" />
 
     </FrameLayout>
 
@@ -273,7 +275,8 @@ ihan terbaik dari gunung."
             android:id="@+id/btn_kopi"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:src="@drawable/ic_keyboard_arrow_right_24px" />
+            android:src="@drawable/ic_keyboard_arrow_right_24px"
+            android:contentDescription="@string/ini_kopi" />
 
     </FrameLayout>
 
@@ -281,23 +284,21 @@ ihan terbaik dari gunung."
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/montserratbold"
-        android:text="KOPI IRENG"
+        android:text="@string/kopi_ireng"
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout9"
         app:layout_constraintStart_toEndOf="@+id/frameLayout3" />
 
     <TextView
-        android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Numerouno kopi khas den-\n
-gan citarasa Indonesiano."
+        android:text="@string/kopi_des"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/frameLayout3"
@@ -308,14 +309,16 @@ gan citarasa Indonesiano."
         android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
         android:alpha="0.48"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
         android:background="@drawable/bg_overlay_orange"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout9"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout9"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
 
     </LinearLayout>
@@ -330,6 +333,7 @@ gan citarasa Indonesiano."
         app:layout_constraintTop_toBottomOf="@+id/frameLayout3">
 
         <ImageView
+            android:contentDescription="@string/ini_minuman"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/minuman_empat" />
@@ -339,11 +343,12 @@ gan citarasa Indonesiano."
     <FrameLayout
         android:layout_width="60dp"
         android:layout_height="60dp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
         android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
         app:layout_constraintTop_toTopOf="@+id/textView12">
 
         <ImageView
+            android:contentDescription="@string/ini_minuman"
             android:id="@+id/btn_sirup"
             android:layout_width="55dp"
             android:layout_height="55dp"
@@ -355,23 +360,21 @@ gan citarasa Indonesiano."
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/montserratbold"
-        android:text="SIRUP MARJAN"
+        android:text="@string/sirup_marjan"
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"
         app:layout_constraintStart_toEndOf="@+id/frameLayout4" />
 
     <TextView
-        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Sirup ciptaan bulan puasa,\n
-yang iklannya menggoda."
+        android:text="@string/sirup_des"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/frameLayout4"
@@ -382,13 +385,16 @@ yang iklannya menggoda."
         android:id="@+id/linearLayout10"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
         android:alpha="0.48"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
         android:background="@drawable/bg_overlay_orange"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout6"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
     </LinearLayout>
@@ -405,7 +411,8 @@ yang iklannya menggoda."
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/minuman_lima" />
+            android:src="@drawable/minuman_lima"
+            android:contentDescription="@string/ini_minuman" />
 
     </FrameLayout>
 
@@ -420,7 +427,8 @@ yang iklannya menggoda."
             android:id="@+id/btn_jeruk"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:src="@drawable/ic_keyboard_arrow_right_24px" />
+            android:src="@drawable/ic_keyboard_arrow_right_24px"
+            android:contentDescription="@string/ini_jeruk" />
 
     </FrameLayout>
 
@@ -428,23 +436,21 @@ yang iklannya menggoda."
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/montserratbold"
-        android:text="ES JERUK"
+        android:text="@string/es_jeruk"
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout10"
         app:layout_constraintStart_toEndOf="@+id/frameLayout5" />
 
     <TextView
-        android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Es jeruk 500an ga pake ke-\n
-ntang, segerrr ra karuan."
+        android:text="@string/jeruk_des"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/frameLayout5"
@@ -461,6 +467,7 @@ ntang, segerrr ra karuan."
         android:src="@drawable/ic_mint_tea"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/ini_minuman" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

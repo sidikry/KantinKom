@@ -7,7 +7,6 @@
     tools:context=".RegisterOneAct">
 
     <View
-        android:id="@+id/view6"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.48"
@@ -29,7 +28,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
         android:layout_width="match_parent"
         android:layout_height="272dp"
         android:alpha="0.48"
@@ -246,16 +244,15 @@
     </LinearLayout>
 
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--<ScrollView-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:orientation="vertical"-->
-<!--android:scrollbars="none"-->
-<!--android:background="@drawable/bg_overlay_ill"-->
-<!--app:layout_constraintEnd_toEndOf="parent"-->
-<!--app:layout_constraintTop_toTopOf="parent">-->
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:scrollbars="none"-->
+    <!--android:background="@drawable/bg_overlay_ill"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent">-->
 
-<!--</ScrollView>-->
+    <!--</ScrollView>-->

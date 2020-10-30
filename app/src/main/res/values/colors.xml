@@ -8,8 +8,5 @@
     <color name="blue_third">#6C63FF</color>
     <color name="black_primary">#454545</color>
     <color name="white_primary">#fff</color>
-    <color name="grey_primary">#fff</color>
-    <color name="greenprimary">#1abc9c</color>
     <color name="orangeprimary">#FF7000</color>
-    <color name="navigation">#565987</color>
 </resources>

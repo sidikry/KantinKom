@@ -18,8 +18,11 @@ import android.widget.ImageView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -27,19 +30,18 @@ import com.squareup.picasso.Picasso;
 
 public class RegisterTwoAct extends AppCompatActivity {
 
-    Button btn_daftar, btn_add_photo;
-    EditText xnama_lengkap, x_bio;
-    ImageView photo_register;
+    private Button btn_daftar;
+    private EditText xnama_lengkap;
+    private EditText x_bio;
+    private ImageView photo_register;
 
-    Uri photo_location;
-    Integer photo_max = 1;
+    private Uri photo_location;
+    private final Integer photo_max = 1;
 
-    DatabaseReference reference;
-    StorageReference storage;
+    private DatabaseReference reference;
+    private StorageReference storage;
 
-    String USER_KEY ="usernamekey";
-    String username_key = "";
-    String username_key_new = "";
+    private String username_key_new = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +52,10 @@ public class RegisterTwoAct extends AppCompatActivity {
         xnama_lengkap = findViewById(R.id.xnama_lengkap);
         x_bio = findViewById(R.id.x_bio);
         photo_register = findViewById(R.id.photo_register);
-        btn_add_photo = findViewById(R.id.btn_add_photo);
+        Button btn_add_photo = findViewById(R.id.btn_add_photo);
         btn_daftar = findViewById(R.id.btn_daftar);
+
+
         btn_daftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +68,7 @@ public class RegisterTwoAct extends AppCompatActivity {
                 storage = FirebaseStorage.getInstance().getReference().child("Photousers").child(username_key_new);
 
                 //Validasi untuk file(Apakah Ada ?)
-                if (photo_location !=null){
+                if (photo_location != null) {
                     final StorageReference storageReference1 = storage
                             .child(System.currentTimeMillis() + "." + getFileExtension(photo_location));
 
@@ -76,13 +80,14 @@ public class RegisterTwoAct extends AppCompatActivity {
                                     reference.getRef().child("url_photo_profile").setValue(uri_photo);
                                     reference.getRef().child("nama_lengkap").setValue(xnama_lengkap);
                                     reference.getRef().child("bio").setValue(x_bio);
+
                                 }
                             }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                                Intent gotosucces = new Intent(RegisterTwoAct.this, SuccesRegisterAct.class);
-                                startActivity(gotosucces);
-                                finish();
+                            Intent gotosucces = new Intent(RegisterTwoAct.this, LoginAct.class);
+                            startActivity(gotosucces);
+                            finish();
                         }
                     });
                 }
@@ -99,13 +104,13 @@ public class RegisterTwoAct extends AppCompatActivity {
 
     }
 
-    String getFileExtension(Uri uri){
+    private String getFileExtension(Uri uri) {
         ContentResolver contentResolver = getContentResolver();
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
     }
 
-    public void findPhoto(){
+    private void findPhoto() {
         Intent pic = new Intent();
         pic.setType("Image/*");
         pic.setAction(Intent.ACTION_GET_CONTENT);
@@ -116,15 +121,18 @@ public class RegisterTwoAct extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == photo_max && resultCode == RESULT_OK && data !=null && data.getData() !=null);
+        if (requestCode == photo_max && resultCode == RESULT_OK && data != null && data.getData() != null)
+            ;
         {
             photo_location = data.getData();
             Picasso.with(this).load(photo_location).centerCrop().fit().into(photo_register);
         }
     }
 
-    public void getUsernameLocal(){
+    private void getUsernameLocal() {
+        String USER_KEY = "usernamekey";
         SharedPreferences sharedPreferences = getSharedPreferences(USER_KEY, MODE_PRIVATE);
+        String username_key = "";
         username_key_new = sharedPreferences.getString(username_key, "");
     }
 }

@@ -17,16 +17,18 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MyFoodDetailAct extends AppCompatActivity {
 
-    Button btn_back;
-    TextView xnama_food, xis_komposisi, x_isby, xketentuan, xharga;
-    DatabaseReference reference;
+    private TextView xnama_food;
+    private TextView xis_komposisi;
+    private TextView x_isby;
+    private TextView xketentuan;
+    private TextView xharga;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_food_detail);
 
-        btn_back = findViewById(R.id.btn_back);
+        Button btn_back = findViewById(R.id.btn_back);
         xnama_food = findViewById(R.id.xnama_food);
         xis_komposisi = findViewById(R.id.xis_komposisi);
         x_isby = findViewById(R.id.x_isby);
@@ -38,15 +40,15 @@ public class MyFoodDetailAct extends AppCompatActivity {
         final String nama_makanan_baru = bundle.getString("nama_food");
 
         //Database
-        reference = FirebaseDatabase.getInstance().getReference().child("Food").child(nama_makanan_baru);
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Food").child(nama_makanan_baru);
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    xnama_food.setText(dataSnapshot.child("nama_food").getValue().toString());
-                    x_isby.setText(dataSnapshot.child("is_by").getValue().toString());
-                    xketentuan.setText(dataSnapshot.child("ketentuan").getValue().toString());
-                    xharga.setText(dataSnapshot.child("harga").getValue().toString());
-                    xis_komposisi.setText(dataSnapshot.child("is_komposisi").getValue().toString());
+                xnama_food.setText(dataSnapshot.child("nama_food").getValue().toString());
+                x_isby.setText(dataSnapshot.child("is_by").getValue().toString());
+                xketentuan.setText(dataSnapshot.child("ketentuan").getValue().toString());
+                xharga.setText(dataSnapshot.child("harga").getValue().toString());
+                xis_komposisi.setText(dataSnapshot.child("is_komposisi").getValue().toString());
             }
 
             @Override

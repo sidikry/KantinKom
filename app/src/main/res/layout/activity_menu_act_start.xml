@@ -1,453 +1,342 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/drawer_layout">
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.48"
+        android:background="@drawable/bg_overlay_ill"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="23dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="27dp"
+        android:src="@drawable/ic_notifications_24px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userbalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/montserratbold"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/white_primary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sourcesansproregular"
+        android:gravity="center"
+        android:text="Selamat Datang"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+    <TextView
+        android:id="@+id/nama_lengkap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratmedium"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="119dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_view_circle_picture_orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
+
+    <com.github.florent37.shapeofview.shapes.CircleView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama_lengkap">
+
+        <ImageView
+            android:id="@+id/photo_home"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/icon_nopic" />
+
+    </com.github.florent37.shapeofview.shapes.CircleView>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/montserratbold"
+        android:gravity="center"
+        android:text="Pilih Menu"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/sourcesansproregular"
+        android:gravity="center"
+        android:text="Silahkan pilih menu yang tersedia"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0.48"
+        android:background="@drawable/bg_overlay_orange"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+    </LinearLayout>
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/flcontent"
-        android:layout_height="match_parent">
+        android:id="@+id/frameLayout"
+        android:layout_width="65dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+        <ImageView
+            android:id="@+id/makanan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_food_icon" />
 
     </FrameLayout>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav"
+    <TextView
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@color/white_primary"
-        app:itemTextColor="@color/black_primary"
-        app:headerLayout="@layout/header"
-        app:menu="@menu/drawermenu"
-        app:itemIconTint="@color/black_primary"
-        android:layout_gravity="start"
-        app:itemTextAppearance="@color/black_primary">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="MAKANAN"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:paddingBottom="12dp"
-            android:clickable="true"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/logo_amikom"
-                android:layout_width="58dp"
-                android:layout_height="58dp"
-                android:layout_marginStart="32dp"
-                android:src="@drawable/logo_amikom"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="8dp"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/textView90"
-                    app:layout_constraintStart_toEndOf="@+id/logo_amikom"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/montserratbold"
-                    android:gravity="center"
-                    android:text="KANTINKOM"
-                    android:textAlignment="center"
-                    android:textColor="@color/black_primary"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/sourcesansproregular"
-                    android:gravity="center"
-                    android:text="Powered By :"
-                    android:textAlignment="center"
-                    android:textColor="@color/black_primary"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toEndOf="@+id/logo_amikom"
-                    app:layout_constraintTop_toBottomOf="@+id/textView90" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sourcesansproregular"
-                    android:gravity="center"
-                    android:text="Kontrakan Keras"
-                    android:layout_marginStart="16dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black_primary"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toEndOf="@+id/logo_amikom"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
-            </LinearLayout>
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/sourcesansproregular"
+        android:text="Cari makanan kesukaan kamu, \ndengan cepat !"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
 
-        </LinearLayout>
-
-    </com.google.android.material.navigation.NavigationView>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MenuActStart">
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0.48"
+        android:background="@drawable/bg_overlay_orange"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-        <View
-            android:id="@+id/view5"
-            android:layout_width="match_parent"
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="65dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <ImageView
+            android:id="@+id/minuman"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:alpha="0.48"
-            android:background="@drawable/bg_overlay_ill"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:src="@drawable/ic_drink_icon" />
 
+    </FrameLayout>
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="23dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="27dp"
-            android:src="@drawable/ic_notifications_24px"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="MINUMAN"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout7"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout2" />
 
-        <TextView
-            android:id="@+id/userbalance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserratbold"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:layout_marginEnd="24dp"
-            android:textColor="@color/white_primary"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view2" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/sourcesansproregular"
+        android:text="Cari makanan kesukaan kamu \ndengan cepat."
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/sourcesansproregular"
-            android:text="Selamat Datang"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view5" />
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0.48"
+        android:background="@drawable/bg_overlay_orange"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
-        <TextView
-            android:id="@+id/nama_lengkap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserratmedium"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+    </LinearLayout>
 
-        <View
-            android:id="@+id/view2"
-            android:layout_width="119dp"
-            android:layout_height="119dp"
-            android:layout_marginStart="11dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/bg_view_circle_picture_orange"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
-
-        <com.github.florent37.shapeofview.shapes.CircleView
-            android:id="@+id/photo_user"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:layout_marginTop="19dp"
-            android:layout_marginLeft="3dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nama_lengkap">
-
-            <ImageView
-                android:id="@+id/photo_home"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@drawable/icon_nopic" />
-
-        </com.github.florent37.shapeofview.shapes.CircleView>
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:fontFamily="@font/montserratbold"
-            android:gravity="center"
-            android:text="Pilih Menu"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view2" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:fontFamily="@font/sourcesansproregular"
-            android:gravity="center"
-            android:text="Silahkan pilih menu yang tersedia"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:alpha="0.48"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginStart="24dp"
-            android:background="@drawable/bg_overlay_orange"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-        </LinearLayout>
-
-        <FrameLayout
-            android:id="@+id/frameLayout"
-            android:layout_width="65dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-            <ImageView
-                android:id="@+id/makanan"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_food_icon" />
-
-        </FrameLayout>
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="60dp"
-            android:fontFamily="@font/montserratbold"
-            android:text="MAKANAN"
-            android:layout_marginLeft="32dp"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="30dp"
-            android:fontFamily="@font/sourcesansproregular"
-            android:text="Cari makanan kesukaan kamu, \ndengan cepat !"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-
-        <LinearLayout
-            android:id="@+id/linearLayout7"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:alpha="0.48"
-            android:background="@drawable/bg_overlay_orange"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        </LinearLayout>
-
-        <FrameLayout
-            android:id="@+id/frameLayout2"
-            android:layout_width="65dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="28dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/frameLayout">
-
-            <ImageView
-                android:id="@+id/minuman"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_drink_icon" />
-
-        </FrameLayout>
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:layout_marginBottom="60dp"
-            android:fontFamily="@font/montserratbold"
-            android:text="MINUMAN"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout7"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout2" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:fontFamily="@font/sourcesansproregular"
-            android:text="Cari makanan kesukaan kamu \ndengan cepat."
-            android:textColor="#fff"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout9"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:alpha="0.48"
-            android:background="@drawable/bg_overlay_orange"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
-
-        </LinearLayout>
-
-        <FrameLayout
-            android:id="@+id/frameLayout3"
-            android:layout_width="65dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="28dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
-
-            <ImageView
-                android:id="@+id/hemat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_pluspaket_icon" />
-
-        </FrameLayout>
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserratbold"
-            android:text="HEMAT"
-            android:layout_marginBottom="60dp"
-            android:layout_marginLeft="32dp"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout9"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout3" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/sourcesansproregular"
-            android:text="Lagi bokek? nikmati saja paket\n hemat yang tersedia."
-            android:textColor="#fff"
-            android:layout_marginLeft="30dp"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/frameLayout3"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="65dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
 
         <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="195dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="24dp"
-            android:alpha="0.2"
-            android:src="@drawable/ic_undraw_eating_together_tjhx"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:id="@+id/hemat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_pluspaket_icon" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="195dp"
-            android:layout_height="150dp"
-            android:layout_marginEnd="24dp"
-            android:alpha="0.2"
-            android:src="@drawable/ic_undraw_hang_out_h9ud"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView8" />
+    </FrameLayout>
 
-        <ImageView
-            android:id="@+id/btn_tentang"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginStart="24dp"
-            android:src="@drawable/ic_info_24pxx"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="HEMAT"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout9"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout3" />
 
-        <ImageView
-            android:id="@+id/btn_power"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="24dp"
-            android:src="@drawable/ic_power_settings_new_24px"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/sourcesansproregular"
+        android:text="Lagi bokek? nikmati saja paket\n hemat yang tersedia."
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="195dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="24dp"
+        android:alpha="0.2"
+        android:src="@drawable/ic_undraw_eating_together_tjhx"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:layout_width="195dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0.2"
+        android:src="@drawable/ic_undraw_hang_out_h9ud"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView8" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/btn_tentang"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_info_24pxx"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-
-
-
-
-</androidx.drawerlayout.widget.DrawerLayout>
+    <ImageView
+        android:id="@+id/btn_power"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_power_settings_new_24px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
