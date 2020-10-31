@@ -46,6 +46,22 @@
     <string name="checkout">CHECKOUT</string>
     <string name="harga">HARGA</string>
     <string name="penjual">PENJUAL</string>
+    <string name="pilih_paket_hemat">Pilih Paket Hemat</string>
+    <string name="silahkan_pilih_menu_yang_tersedia">Silahkan pilih menu yang tersedia</string>
+    <string name="ic_next">ic_next</string>
+    <string name="telor_kopi">TELOR + KOPI</string>
+    <string name="kenyang">Abis kenyang terus lanjut\n ngopi, wualah nikmat.</string>
+    <string name="roti_kopi">ROTI + KOPI</string>
+    <string name="kopi">Del lezato kopi plus rotio.\n Dengan sedikit pahit.</string>
+    <string name="kolak">kolak</string>
+    <string name="kolak_bule">KOLAK BULE</string>
+    <string name="kolak_bule_desc">Karena kids zaman now bu-\n tuh makan yang westernan.</string>
+    <string name="roti_telur">roti_telur</string>
+    <string name="menu_roti_telur">ROTI + TELUR</string>
+    <string name="desc_roti_telur">Roti panggang dipadu den-\n ngan telur pilihan.</string>
+    <string name="sate">sate</string>
+    <string name="sate_madura">SATE MADURA</string>
+    <string name="sate_desc">Te sate sate taye, yuk nikm-\n ati sate terbaik dari Madura.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

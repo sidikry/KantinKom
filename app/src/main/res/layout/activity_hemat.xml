@@ -26,7 +26,8 @@
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_keyboard_backspace_24px"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/ic_back" />
 
     <ImageView
         android:layout_width="40dp"
@@ -35,7 +36,8 @@
         android:layout_marginEnd="24dp"
         android:src="@drawable/ic_notifications_24px"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/ic_notif" />
 
     <ImageView
         android:id="@+id/logo_amikom"
@@ -45,7 +47,8 @@
         android:src="@drawable/logo_amikom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/ic_logo" />
 
     <TextView
         android:id="@+id/textView8"
@@ -55,7 +58,7 @@
         android:layout_marginTop="60dp"
         android:fontFamily="@font/montserratmedium"
         android:gravity="center"
-        android:text="Pilih Paket Hemat"
+        android:text="@string/pilih_paket_hemat"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="20sp"
@@ -69,7 +72,7 @@
         android:layout_marginStart="24dp"
         android:fontFamily="@font/sourcesansproregular"
         android:gravity="center"
-        android:text="Silahkan pilih menu yang tersedia"
+        android:text="@string/silahkan_pilih_menu_yang_tersedia"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="16sp"
@@ -106,7 +109,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/hemat_satu" />
+            android:src="@drawable/hemat_satu"
+            android:contentDescription="@string/ic_image" />
 
     </FrameLayout>
 
@@ -121,7 +125,8 @@
             android:id="@+id/btn_telur"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:src="@drawable/ic_keyboard_arrow_right_24px" />
+            android:src="@drawable/ic_keyboard_arrow_right_24px"
+            android:contentDescription="@string/ic_next" />
 
     </FrameLayout>
 
@@ -129,10 +134,10 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/montserratbold"
-        android:text="TELOR + KOPI"
+        android:text="@string/telor_kopi"
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
@@ -142,11 +147,10 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Abis kenyang terus lanjut\n
-ngopi, wualah nikmat."
+        android:text="@string/kenyang"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/frameLayout"
@@ -182,7 +186,8 @@ ngopi, wualah nikmat."
             android:id="@+id/minuman"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/hemat_dua" />
+            android:src="@drawable/hemat_dua"
+            android:contentDescription="@string/ic_image" />
 
     </FrameLayout>
 
@@ -197,7 +202,8 @@ ngopi, wualah nikmat."
             android:id="@+id/btn_roti"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:src="@drawable/ic_keyboard_arrow_right_24px" />
+            android:src="@drawable/ic_keyboard_arrow_right_24px"
+            android:contentDescription="@string/ic_next" />
 
     </FrameLayout>
 
@@ -205,10 +211,10 @@ ngopi, wualah nikmat."
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/montserratbold"
-        android:text="ROTI + KOPI"
+        android:text="@string/roti_kopi"
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout7"
@@ -217,10 +223,9 @@ ngopi, wualah nikmat."
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Del lezato kopi plus rotio.\n
-Dengan sedikit pahit."
+        android:text="@string/kopi"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/frameLayout2"
@@ -254,7 +259,8 @@ Dengan sedikit pahit."
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/hemat_tiga" />
+            android:src="@drawable/hemat_tiga"
+            android:contentDescription="@string/kolak" />
 
     </FrameLayout>
 
@@ -269,7 +275,8 @@ Dengan sedikit pahit."
             android:id="@+id/btn_kolak"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:src="@drawable/ic_keyboard_arrow_right_24px" />
+            android:src="@drawable/ic_keyboard_arrow_right_24px"
+            android:contentDescription="@string/ic_next" />
 
     </FrameLayout>
 
@@ -277,10 +284,10 @@ Dengan sedikit pahit."
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/montserratbold"
-        android:text="KOLAK BULE"
+        android:text="@string/kolak_bule"
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout9"
@@ -289,10 +296,9 @@ Dengan sedikit pahit."
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Karena kids zaman now bu-\n
-tuh makan yang westernan."
+        android:text="@string/kolak_bule_desc"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/frameLayout3"
@@ -311,9 +317,7 @@ tuh makan yang westernan."
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
 
     <FrameLayout
         android:id="@+id/frameLayout4"
@@ -327,7 +331,8 @@ tuh makan yang westernan."
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/hemat_empat" />
+            android:src="@drawable/hemat_empat"
+            android:contentDescription="@string/roti_telur" />
 
     </FrameLayout>
 
@@ -342,7 +347,8 @@ tuh makan yang westernan."
             android:id="@+id/btn_rolur"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:src="@drawable/ic_keyboard_arrow_right_24px" />
+            android:src="@drawable/ic_keyboard_arrow_right_24px"
+            android:contentDescription="@string/ic_next" />
 
     </FrameLayout>
 
@@ -350,10 +356,10 @@ tuh makan yang westernan."
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/montserratbold"
-        android:text="ROTI + TELUR"
+        android:text="@string/menu_roti_telur"
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout6"
@@ -362,10 +368,9 @@ tuh makan yang westernan."
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Roti panggang dipadu den-\n
-ngan telur pilihan."
+        android:text="@string/desc_roti_telur"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/frameLayout4"
@@ -399,7 +404,8 @@ ngan telur pilihan."
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/hemat_lima" />
+            android:src="@drawable/hemat_lima"
+            android:contentDescription="@string/sate" />
 
     </FrameLayout>
 
@@ -414,7 +420,8 @@ ngan telur pilihan."
             android:id="@+id/btn_sate"
             android:layout_width="55dp"
             android:layout_height="55dp"
-            android:src="@drawable/ic_keyboard_arrow_right_24px" />
+            android:src="@drawable/ic_keyboard_arrow_right_24px"
+            android:contentDescription="@string/ic_next" />
 
     </FrameLayout>
 
@@ -422,10 +429,10 @@ ngan telur pilihan."
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/montserratbold"
-        android:text="SATE MADURA"
+        android:text="@string/sate_madura"
         android:textColor="#fff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout10"
@@ -434,10 +441,9 @@ ngan telur pilihan."
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Te sate sate taye, yuk nikm-\n
-ati sate terbaik dari Madura."
+        android:text="@string/sate_desc"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/frameLayout5"
@@ -454,7 +460,8 @@ ati sate terbaik dari Madura."
         android:src="@drawable/ic_hot_beverage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/ic_image" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
