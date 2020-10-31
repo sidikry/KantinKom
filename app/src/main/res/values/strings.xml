@@ -44,6 +44,8 @@
     <string name="rating">RATING</string>
     <string name="ic_rating">ic_rating</string>
     <string name="checkout">CHECKOUT</string>
+    <string name="harga">HARGA</string>
+    <string name="penjual">PENJUAL</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
