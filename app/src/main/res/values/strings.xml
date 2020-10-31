@@ -20,6 +20,8 @@
     <string name="ini_jeruk">ini Jeruk</string>
     <string name="es_jeruk">ES JERUK</string>
     <string name="jeruk_des">Es jeruk 500an ga pake ke-\n ntang, segerrr ra karuan.</string>
+    <string name="image_cart">image_cart</string>
+    <string name="_1">1</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
