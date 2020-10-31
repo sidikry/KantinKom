@@ -38,6 +38,12 @@
     <string name="total_bayar">Total Bayar</string>
     <string name="ic_shop">ic_shop</string>
     <string name="ic_info">ic_info</string>
+    <string name="ic_menu">ic_menu</string>
+    <string name="harga">HARGA</string>
+    <string name="penjual">PENJUAL</string>
+    <string name="rating">RATING</string>
+    <string name="ic_rating">ic_rating</string>
+    <string name="checkout">CHECKOUT</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
