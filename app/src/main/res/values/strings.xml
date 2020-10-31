@@ -22,6 +22,22 @@
     <string name="jeruk_des">Es jeruk 500an ga pake ke-\n ntang, segerrr ra karuan.</string>
     <string name="image_cart">image_cart</string>
     <string name="_1">1</string>
+    <string name="ic_back">ic_back</string>
+    <string name="ic_notif">ic_notif</string>
+    <string name="ic_logo">ic_logo</string>
+    <string name="detail_pesanan">DETAIL PESANAN</string>
+    <string name="pesan_desc">Pesanan anda, silahkan lanjut pembayaran</string>
+    <string name="ic_dompet">ic_dompet</string>
+    <string name="_1">1</string>
+    <string name="pembayaran">PEMBAYARAN</string>
+    <string name="bayar_desc">Silahkan masukan jumlah pesanan</string>
+    <string name="saldo_anda">Saldo Anda</string>
+    <string name="ic_image">ic_image</string>
+    <string name="checkout">CHECKOUT</string>
+    <string name="ic_important">ic_important</string>
+    <string name="total_bayar">Total Bayar</string>
+    <string name="ic_shop">ic_shop</string>
+    <string name="ic_info">ic_info</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
