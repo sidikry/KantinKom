@@ -25,7 +25,8 @@
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_keyboard_backspace_24px"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/ic_back" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -35,7 +36,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/ic_image" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -45,21 +47,21 @@
         android:src="@drawable/logo_amikom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/ic_logo" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserratbold"
-        android:text="Upload Photo"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="@string/upload_photo"
         android:textColor="#fff"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
 
@@ -69,24 +71,24 @@
         android:layout_height="119dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/bg_view_circle_picture_orange"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <com.github.florent37.shapeofview.shapes.CircleView
+        android:id="@+id/circleView"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginTop="19dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <ImageView
             android:id="@+id/photo_register"
             android:layout_width="110dp"
             android:layout_height="110dp"
+            android:contentDescription="@string/ic_upload"
             android:src="@drawable/icon_nopic" />
 
     </com.github.florent37.shapeofview.shapes.CircleView>
@@ -97,9 +99,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <TextView
@@ -109,7 +110,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/montserratmedium"
-            android:text="Nama Lengkap"
+            android:text="@string/nama_lengkap"
             android:textColor="#fff"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -119,12 +120,14 @@
             android:layout_width="365dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
+            android:autofillHints="@string/name"
             android:background="@drawable/bg_input_edit_orange"
             android:fontFamily="@font/montserratmedium"
             android:inputType="textEmailAddress"
             android:lines="1"
-            android:paddingLeft="12dp"
+            android:paddingStart="12dp"
             android:textColor="@color/black_primary"
+            tools:ignore="LabelFor,RtlSymmetry"
             tools:layout_editor_absoluteX="157dp"
             tools:layout_editor_absoluteY="443dp" />
 
@@ -148,7 +151,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/montserratmedium"
-            android:text="Bio / Status"
+            android:text="@string/bio_status"
             android:textColor="#fff"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -162,10 +165,12 @@
             android:fontFamily="@font/montserratmedium"
             android:inputType="text"
             android:lines="1"
-            android:paddingLeft="12dp"
+            android:paddingStart="12dp"
             android:textColor="@color/black_primary"
             tools:layout_editor_absoluteX="157dp"
-            tools:layout_editor_absoluteY="443dp" />
+            tools:layout_editor_absoluteY="443dp"
+            tools:ignore="LabelFor,RtlSymmetry"
+            android:autofillHints="@string/mhs" />
 
     </LinearLayout>
 
@@ -174,13 +179,13 @@
         android:id="@+id/btn_daftar"
         android:layout_width="160dp"
         android:layout_height="40dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/bg_btn_orange"
         android:fontFamily="@font/montserratmedium"
-        android:text="Daftar"
-        android:layout_marginTop="24dp"
+        android:text="@string/daftar"
         android:textColor="#fff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 
@@ -188,14 +193,14 @@
         android:id="@+id/btn_add_photo"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="130dp"
-        android:layout_marginTop="32dp"
         android:background="@drawable/bg_btn_blue_plus"
         android:fontFamily="@font/montserratmedium"
-        android:text="+"
+        android:text="@string/plus"
         android:textColor="#fff"
+        android:layout_marginEnd="24dp"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

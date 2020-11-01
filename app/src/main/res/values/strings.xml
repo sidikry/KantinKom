@@ -69,6 +69,15 @@
     <string name="bait4">-- Heuheuheuhu --</string>
     <string name="txt_btn">Kembali ke Mantan</string>
     <string name="eh_pesanan">* Eh Pesanan</string>
+    <string name="nameApp">KantinKOM</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="ic_upload">ic_upload</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="bio_status">Bio / Status</string>
+    <string name="daftar">Daftar</string>
+    <string name="plus">+</string>
+    <string name="mhs">Mahasiswa</string>
+    <string name="name">Sidik Ristiawan Yusuf</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
