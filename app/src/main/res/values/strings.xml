@@ -62,6 +62,13 @@
     <string name="sate">sate</string>
     <string name="sate_madura">SATE MADURA</string>
     <string name="sate_desc">Te sate sate taye, yuk nikm-\n ati sate terbaik dari Madura.</string>
+    <string name="pesanan_n_sukses">PESANAN\n SUKSES</string>
+    <string name="bait1">Silahkan menuju ke pelukan mantan,\njika memang itu yang kau inginkan.</string>
+    <string name="bait2">Namun jika setelah kau berjalan wa-\n jahku masih kau temukan.\n Kemarilah kan kudekap senyummu\n yang telah luput dari ratapku.</string>
+    <string name="bait3">Andaikan pelikmu masih saja meng-\n hantu, kan kudekap engkau dengan\n sepenuh pelukku, meski ragu masih\n menderu. Tak apa, asal pilumu telah\n tersapu, kekasih.</string>
+    <string name="bait4">-- Heuheuheuhu --</string>
+    <string name="txt_btn">Kembali ke Mantan</string>
+    <string name="eh_pesanan">* Eh Pesanan</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

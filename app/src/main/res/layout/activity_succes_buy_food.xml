@@ -26,7 +26,8 @@
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_keyboard_backspace_24px"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/ic_back" />
 
     <ImageView
         android:layout_width="40dp"
@@ -35,7 +36,8 @@
         android:layout_marginEnd="24dp"
         android:src="@drawable/ic_notifications_24px"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/ic_notif" />
 
     <ImageView
         android:id="@+id/logo_amikom"
@@ -45,7 +47,8 @@
         android:src="@drawable/logo_amikom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/ic_logo" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -68,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserratbold"
-        android:text="PESANAN\n SUKSES"
+        android:text="@string/pesanan_n_sukses"
         android:layout_marginTop="48dp"
         android:textColor="#fff"
         android:textSize="36sp"
@@ -83,7 +86,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginStart="32dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Silahkan menuju ke pelukan mantan,\njika memang itu yang kau inginkan."
+        android:text="@string/bait1"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
@@ -96,10 +99,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="34dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Namun jika setelah kau berjalan wa-\n
-jahku masih kau temukan.\n
-Kemarilah kan kudekap senyummu\n
-yang telah luput dari ratapku."
+        android:text="@string/bait2"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
@@ -112,11 +112,7 @@ yang telah luput dari ratapku."
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="Andaikan pelikmu masih saja meng-\n
-hantu, kan kudekap engkau dengan\n
-sepenuh pelukku, meski ragu masih\n
-menderu. Tak apa, asal pilumu telah\n
-tersapu, kekasih."
+        android:text="@string/bait3"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
@@ -128,7 +124,7 @@ tersapu, kekasih."
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="-- Heuheuheuhu --"
+        android:text="@string/bait4"
         android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
@@ -141,7 +137,7 @@ tersapu, kekasih."
         android:layout_height="66dp"
         android:background="@drawable/bg_btn_orange"
         android:fontFamily="@font/montserratmedium"
-        android:text="Kembali ke Mantan"
+        android:text="@string/txt_btn"
         android:layout_marginTop="16dp"
         android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
@@ -152,7 +148,7 @@ tersapu, kekasih."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sourcesansproregular"
-        android:text="* Eh Pesanan"
+        android:text="@string/eh_pesanan"
         android:layout_marginBottom="8dp"
         android:textColor="#fff"
         android:textSize="16sp"
@@ -170,6 +166,7 @@ tersapu, kekasih."
         android:src="@drawable/ic_undraw_order_confirmed_1m3v"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/ic_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
